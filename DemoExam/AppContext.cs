@@ -1,0 +1,5 @@
+﻿namespace DemoExam;
+
+class AppContext {
+
+}
