@@ -28,4 +28,9 @@ public partial class Product {
     [ForeignKey("ТипПродукции")]
     [InverseProperty("Products")]
     public virtual ProductType? ТипПродукцииNavigation { get; set; }
+
+    //
+    // Common Price for product
+    [NotMapped]
+    public double CommonPrice { get; set; } = 0.00;
 }

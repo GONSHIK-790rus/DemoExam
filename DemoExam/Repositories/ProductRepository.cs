@@ -2,7 +2,7 @@
 using DemoExam.Entities;
 using DemoExam.DataBase;
 
-namespace DemoExam;
+namespace DemoExam.Repositories;
 
 internal class ProductRepository {
     private readonly AppDbContext _AppDbContext;
@@ -11,6 +11,9 @@ internal class ProductRepository {
     }
 
     public async Task<List<Product>> GetAllProductsAsync() {
-        return await _AppDbContext.Products.ToListAsync();
+        return await _AppDbContext.Products
+            .Include(product => product.ProductMaterials)
+                .ThenInclude(productMaterial => productMaterial.НаименованиеМатериалаNavigation)
+            .ToListAsync();
     }
 }

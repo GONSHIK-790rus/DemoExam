@@ -16,7 +16,7 @@ public class ProductCard {
         var articleLabel = CreateArticleLabel(product.Артикул);
         var minPriceForPartner = CreateMinPriceForPartnerLabel(product.МинимальнаяСтоимостьДляПартнера ?? 0.00);
         var widthLabel = CreateWidthLabel(product.ШиринаРулонаМ ?? 0.00);
-        var priceLabel = CreatePriceLabel(0.00);
+        var priceLabel = CreatePriceLabel(product.CommonPrice);
 
         card.Controls.Add(titleLabel);
         card.Controls.Add(articleLabel);
@@ -33,7 +33,7 @@ public class ProductCard {
     private Panel CreatePanel() {
         return new Panel {
             BorderStyle = BorderStyle.FixedSingle,
-            Size = new Size(850, 130),
+            Size = new Size(880, 130),
             Margin = new Padding(15),
             BackColor = Color.FromArgb(187, 217, 178)
         };

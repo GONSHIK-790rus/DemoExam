@@ -41,7 +41,7 @@ partial class MainForm {
         flowLayoutPanel_ForCards.Dock = DockStyle.Fill;
         flowLayoutPanel_ForCards.Location = new Point(0, 90);
         flowLayoutPanel_ForCards.Name = "flowLayoutPanel_ForCards";
-        flowLayoutPanel_ForCards.Size = new Size(904, 371);
+        flowLayoutPanel_ForCards.Size = new Size(934, 371);
         flowLayoutPanel_ForCards.TabIndex = 0;
         // 
         // label_CompanyName
@@ -74,14 +74,14 @@ partial class MainForm {
         UpperPanel.Dock = DockStyle.Top;
         UpperPanel.Location = new Point(0, 0);
         UpperPanel.Name = "UpperPanel";
-        UpperPanel.Size = new Size(904, 90);
+        UpperPanel.Size = new Size(934, 90);
         UpperPanel.TabIndex = 3;
         // 
         // MainForm
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(904, 461);
+        ClientSize = new Size(934, 461);
         Controls.Add(flowLayoutPanel_ForCards);
         Controls.Add(UpperPanel);
         Icon = (Icon)resources.GetObject("$this.Icon");
